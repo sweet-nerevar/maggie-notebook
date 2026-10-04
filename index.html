@@ -125,6 +125,31 @@
     transition:
       opacity 0.18s ease,
       transform 0.18s ease;
+   
+  }
+   .page-dress {
+  position: absolute;
+  inset: 0;
+
+  z-index: 15;
+
+  pointer-events: none;
+      
+  }
+
+.page-decor {
+  position: absolute;
+
+  left: var(--x, 0%);
+  top: var(--y, 0%);
+
+  width: var(--w, 20%);
+  height: auto;
+
+  transform: rotate(var(--r, 0deg));
+
+  transform-origin: center;
+    
   }
 
   .page-content.changing {
@@ -439,6 +464,14 @@ const sections = {
           <div class="portrait-wrap">
             <img class="portrait-warp" id="edita" src="./editha.webp" alt="Эдита Блэк">
           </div>
+      <div class="page-dress"><img class="page-decor" src="./suspect-he-returned.webp"
+      style="
+        --x: 58%;
+        --y: 45%;
+        --w: 10%;
+        --r: -10deg;
+      "
+    ></div>
         `,
         right: `
           <h2>Эдита Блэк</h2>
