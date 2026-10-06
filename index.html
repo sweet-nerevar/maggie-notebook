@@ -88,21 +88,21 @@
   }
 
   .page-overlay.left {
-    left: -12%;
-    top: 14%;
-    width: 90%;
+    left: -15%;
+    top: 8%;
+    width: 100%;
     height: 100%;
 
-    transform: rotate(8deg);
+    transform: rotate(9deg);
   }
 
   .page-overlay.right {
-    left: 52%;
+    left: 53%;
     top: 15.85%;
     width: 35%;
     height: 59.19%;
 
-    transform: rotate(-4deg);
+    transform: rotate(-5deg);
   }
 
   .page-content {
@@ -435,43 +435,25 @@
 const sections = {
   people: {
     pages: [
-      {
+       {
         left: `
           <div class="portrait-wrap">
-            <img src="./victoria.webp" class="portrait-warp" id="victoria" alt="Виктория Холлоуэй">
+            <img class="portrait-warp" id="artel" src="./artel.webp" alt="Артель">
           </div>
         `,
         right: `
-          <h2>Виктория Холлоуэй</h2>
-          <p>Заказала Эдите статью, выставляющую меня последовательницей Грин-де-Вальда и манипуляторшей;<br>По словам Эдиты, намеренно сталкивает людей между собой.<br>Также каким-то образом знает о ликантропии и публично раскрыла ее вместе с тайной Литы, одновременно заговорив об учениках с "неконтролируемой магией".<br>
-<b>Связи:</b><br>Эдита — подтвержденная;<br>Дамблдор — возможный источник информации;<br>Дерек — возможная связь по таймингу и выгодному для Холлоуэй сценарию, но доказательств пока нет.</p>
+          <h2>Артель</h2>
+          <p>Участники считают Артель компанией взаимовыручки, хотя окружающие чаще называют нас Барсучьей шайкой. К пятому курсу слухи превратили нас почти в школьную легенду. Большинство историй, конечно, сильно преувеличены, но несколько раз мы действительно оказывались в кабинете директора за драки, ночные вылазки и попытку провести в теплицы козу.<br><br><b>Оуэн Прайс</b> - наш задрот-стратег.<br>
+<b>Беа Харпер</b> - траволог-зельевар <i>(моя лучшая подружка <3)</i><br>
+<b>Элиас Мур</b> - ведет себя как таинственный принц, иногда это раздражает. Но отличный дуэлянт!
+</p>
         `
       },
       {
         left: `
           <div class="portrait-wrap">
-            <img class="portrait-warp" id="derek" src="./derek.webp" alt="Дерек">
+            <img class="portrait-warp" id="edita" src="./editha_v2.webp" alt="Эдита Блэк">
           </div>
-        `,
-        right: `
-          <h2>Дерек</h2>
-          <p>Похитил Бею как приманку, устроил ловушку для меня, применил Империо и заставил меня мучить Агнес Круцио.<br>Его объяснение сводится к старой обиде на Артель и зависти к тому, что я "не одна", но масштаб и подготовленность нападения слишком велики для обычной школьной вендетты.<br>
-<b>Связи:</b><br>Бея — многолетняя цель;<br> Холлоуэй — пока только подозрительная гипотеза. <br>Эдита ↔ Дерек — есть повторяющийся символ «чистой души» во сне, но это не доказательство реальной связи.</p>
-        `
-      },
-      {
-        left: `
-          <div class="portrait-wrap">
-            <img class="portrait-warp" id="edita" src="./editha.webp" alt="Эдита Блэк">
-          </div>
-      <div class="page-dress"><img class="page-decor" src="./suspect-he-returned.webp"
-      style="
-        --x: 58%;
-        --y: 45%;
-        --w: 10%;
-        --r: -10deg;
-      "
-    ></div>
         `,
         right: `
           <h2>Эдита Блэк</h2>
@@ -482,7 +464,7 @@ const sections = {
       {
         left: `
           <div class="portrait-wrap">
-            <img class="portrait-warp" id="dumbledore" src="./dumbledore.webp" alt="Профессор Дамблдор">
+            <img class="portrait-warp" id="dumbledore" src="./dumbledore_v2.webp" alt="Профессор Дамблдор">
           </div>
         `,
         right: `
@@ -494,13 +476,37 @@ const sections = {
       {
         left: `
           <div class="portrait-wrap">
-            <img class="portrait-warp" id="ogg" src="./ogg.webp" alt="Лесничий Огг">
+            <img class="portrait-warp" id="derek" src="./derek_v2.webp" alt="Дерек">
+          </div>
+        `,
+        right: `
+          <h2>Дерек</h2>
+          <p>Похитил Бею как приманку, устроил ловушку для меня, применил Империо и заставил меня мучить Агнес Круцио.<br>Его объяснение сводится к старой обиде на Артель и зависти к тому, что я "не одна", но масштаб и подготовленность нападения слишком велики для обычной школьной вендетты.<br>
+<b>Связи:</b><br>Бея — многолетняя цель;<br> Холлоуэй — пока только подозрительная гипотеза. <br>Эдита ↔ Дерек — есть повторяющийся символ «чистой души» во сне, но это не доказательство реальной связи.</p>
+        `
+      },
+      {
+        left: `
+          <div class="portrait-wrap">
+            <img class="portrait-warp" id="ogg" src="./ogg_v2.webp" alt="Лесничий Огг">
           </div>
         `,
         right: `
           <h2>Лесничий Огг</h2>
           <p>Укусил меня. Именно через него я вообще оказалась втянута в историю оборотней.<br> Позже привел меня к их сообществу и на этом по сути счел свою миссию выполненной.<br>Пока скорее источник проблемы и проводник в эту ветку, чем самостоятельная фигура в заговоре.<br>
 <b>Связи:</b><br>Консерватория оборотней — прямая; <br>Я и он — укус, знакомство с сообществом.</p>
+        `
+      },
+            {
+        left: `
+          <div class="portrait-wrap">
+            <img src="./victoria_v2.webp" class="portrait-warp" id="victoria" alt="Виктория Холлоуэй">
+          </div>
+        `,
+        right: `
+          <h2>Виктория Холлоуэй</h2>
+          <p>Заказала Эдите статью, выставляющую меня последовательницей Грин-де-Вальда и манипуляторшей;<br>По словам Эдиты, намеренно сталкивает людей между собой.<br>Также каким-то образом знает о ликантропии и публично раскрыла ее вместе с тайной Литы, одновременно заговорив об учениках с "неконтролируемой магией".<br>
+<b>Связи:</b><br>Эдита — подтвержденная;<br>Дамблдор — возможный источник информации;<br>Дерек — возможная связь по таймингу и выгодному для Холлоуэй сценарию, но доказательств пока нет.</p>
         `
       }
     ]
@@ -525,7 +531,7 @@ const sections = {
       {
         left: ` 
         <div class="portrait-wrap">
-            <img class="portrait-warp" id="hogwarts" src="./hogwarts.webp">
+            <img class="portrait-warp" id="hogwarts" src="./hogwarts2.webp">
           </div>
         `,
         right: `
@@ -546,7 +552,7 @@ const sections = {
       {
         left: `
         <div class="portrait-wrap">
-        <img class="portrait-warp" id="hogsmith" src="./hogsmith.webp">
+        <img class="portrait-warp" id="hogsmith" src="./hogsmith2.webp">
         `,
         right: `
         <p>"Собачий хвост и смертельная лоза" - лавка, на которую мне указала Элиана Торнвуд. Там могли находиться ингредиенты для лечения от ликантропии. По итогу я и Изабелла нашли лишь оставленную лавку со странными банками и засохшим растением. Наверное, не стоит говорить, что мы разбили окно, когда пытались забраться внутрь. Надеюсь, мне за это не прилетит.</p>
@@ -603,7 +609,7 @@ const sections = {
       {
         left: `
         <div class="portrait-wrap">
-        <img class="portrait-warp" id="items" src="./items.webp">
+        <img class="portrait-warp" id="items" src="./items_v2.webp">
         `,
         right: `
                  <ul>
@@ -617,7 +623,7 @@ const sections = {
 
   <li>
     <strong>Проявитель врагов</strong> — зеркало, в котором должны проявляться/отражаться враги или потенциальная угроза.
-  </li>
+  </li><br>
 
   <li>
     <strong>Магический глаз</strong> — куплен на ярмарке; свойства пока не проверены. Непонятно это самостоятельный артефакт или глаз-протез и можно ли пользоваться им, не лишаясь собственного глаза. <i>(Не хотелось бы)</i>
@@ -656,78 +662,84 @@ const sections = {
    ========================================================= */
 
 const WARP_CONFIG = {
+  artel: {
+    topLeft:     { x:  -40, y: 10 },
+    topRight:    { x:  -20, y: 35 },
+    bottomRight: { x:  95, y:  40 },
+    bottomLeft:  { x: -20, y:   50 }
+  },
   victoria: {
-    topLeft:     { x:  -30, y: -20 },
-    topRight:    { x:  0, y:   0 },
-    bottomRight: { x:  90, y:  10 },
-    bottomLeft:  { x: -18, y:   8 }
+    topLeft:     { x:  -40, y: 10 },
+    topRight:    { x:  -20, y: 25 },
+    bottomRight: { x:  95, y:  40 },
+    bottomLeft:  { x: -20, y:   50 }
   },
 
   derek: {
-    topLeft:     { x:  -30, y: -20 },
-    topRight:    { x:  0, y:   0 },
-    bottomRight: { x:  90, y:  10 },
-    bottomLeft:  { x: -18, y:   8 }
+    topLeft:     { x:  -40, y: 10 },
+    topRight:    { x:  -20, y: 30 },
+    bottomRight: { x:  95, y:  90 },
+    bottomLeft:  { x: -20, y:   100 }
   },
 
   edita: {
-    topLeft:     { x:  -30, y: -20 },
-    topRight:    { x:  0, y:   0 },
-    bottomRight: { x:  90, y:  10 },
-    bottomLeft:  { x: -18, y:   8 }
+    topLeft:     { x:  -40, y: 20 },
+    topRight:    { x:  -20, y: 40 },
+    bottomRight: { x:  90, y:  30 },
+    bottomLeft:  { x: -20, y: 40 }
   },
 
   dumbledore: {
-    topLeft:     { x:  -30, y: -20 },
-    topRight:    { x:  0, y:   0 },
-    bottomRight: { x:  90, y:  10 },
-    bottomLeft:  { x: -18, y:   8 }
+    topLeft:     { x:  -60, y: 10 },
+    topRight:    { x:  -20, y:   30 },
+    bottomRight: { x:  100, y:  -3 },
+    bottomLeft:  { x: -40, y:   10 }
   },
 
   ogg: {
-    topLeft:     { x:  -30, y: -20 },
-    topRight:    { x:  0, y:   0 },
-    bottomRight: { x:  90, y:  10 },
-    bottomLeft:  { x: -18, y:   8 }
+    topLeft:     { x:  -30, y: 20 },
+    topRight:    { x:  -20, y: 40 },
+    bottomRight: { x:  90, y: 60 },
+    bottomLeft:  { x: -20, y: 70 }
   },
 
   ministry: {
-    topLeft:     { x:  -30, y: -20 },
-    topRight:    { x:  0, y:   0 },
-    bottomRight: { x:  90, y:  10 },
-    bottomLeft:  { x: -18, y:   8 }
+    topLeft:     { x:  -20, y: 20 },
+    topRight:    { x:  -40, y: 40 },
+    bottomRight: { x: 60, y: -60 },
+    bottomLeft:  { x: -10, y: -40 }
   },
 
   conservatory: {
-    topLeft:     { x:  -30, y: -20 },
-    topRight:    { x:  0, y:   0 },
-    bottomRight: { x:  90, y:  10 },
-    bottomLeft:  { x: -18, y:   8 }
+    topLeft:     { x:  -20, y: 20 },
+    topRight:    { x:  -40, y: 40 },
+    bottomRight: { x:  60, y: -60 },
+    bottomLeft:  { x: -10, y: -40 }
   },
   
   hogwarts: {
-    topLeft:     { x:  -30, y: -20 },
-    topRight:    { x:  0, y:   0 },
-    bottomRight: { x:  90, y:  10 },
-    bottomLeft:  { x: -18, y:   8 }
+    topLeft:     { x:  -30, y: 10 },
+    topRight:    { x:  -40, y: 30 },
+    bottomRight: { x:  90, y:  60 },
+    bottomLeft:  { x: -30, y: 70 }
   }, 
    hogsmith: {
-    topLeft:     { x:  -30, y: -20 },
-    topRight:    { x:  0, y:   0 },
-    bottomRight: { x:  90, y:  10 },
-    bottomLeft:  { x: -18, y:   8 }
+    topLeft:     { x:  -30, y: 10 },
+    topRight:    { x:  -40, y: 30 },
+    bottomRight: { x:  90, y:  60 },
+    bottomLeft:  { x: -30, y: 70 }
   }, 
    forestshack: {
-    topLeft:     { x:  -30, y: -20 },
-    topRight:    { x:  0, y:   0 },
-    bottomRight: { x:  90, y:  10 },
-    bottomLeft:  { x: -18, y:   8 }
+    topLeft:     { x:  -30, y: 10 },
+    topRight:    { x:  -40, y: 30 },
+    bottomRight: { x:  90, y:  60 },
+    bottomLeft:  { x: -30, y: 70 }
   },
     items: {
-    topLeft:     { x:  -30, y: -40 },
-    topRight:    { x:  20, y:   -10 },
-    bottomRight: { x:  120, y:  50 },
-    bottomLeft:  { x: -50, y:  50 }
+    topLeft:     { x:  -49, y: 5 },
+    topRight:    { x:  -10, y: 30 },
+    bottomRight: { x:  100, y:  50 },
+    bottomLeft:  { x: -40, y:  60 }
   }
 };
 
