@@ -879,7 +879,7 @@
 
     <button class="tab" data-section="organizations"><img src="./bookmark1.webp" alt="Организации"></button>
 
-    <button class="tab" data-section="objects"><img src="./bookmark4.webp" alt="Вещи"></button>
+    <button class="tab" data-section="objects"><img src="./bookmark4.webp" alt="Мечты"></button>
 
 
 
@@ -925,34 +925,6 @@ const sections = {
 
     pages: [
 
-     {
-
-        left: `
-
-          <div class="portrait-wrap">
-
-            <img class="portrait-warp" id="artel" src="./artel.webp" alt="Артель">
-
-          </div>
-
-        `,
-
-        right: `
-
-          <h2>Артель</h2>
-
-          <p>Участники считают Артель компанией взаимовыручки, хотя окружающие чаще называют нас Барсучьей шайкой. К пятому курсу слухи превратили нас почти в школьную легенду. Большинство историй, конечно, сильно преувеличены, но несколько раз мы действительно оказывались в кабинете директора за драки, ночные вылазки и попытку провести в теплицы козу.<br><br><b>Оуэн Прайс</b> - наш задрот-стратег.<br>
-
-<b>Беа Харпер</b> - траволог-зельевар <i>(моя лучшая подружка <3)</i><br>
-
-<b>Элиас Мур</b> - ведет себя как таинственный принц, иногда это раздражает. Но отличный дуэлянт!
-
-</p>
-
-        `
-
-      },
-
       {
 
         left: `
@@ -962,6 +934,18 @@ const sections = {
             <img class="portrait-warp" id="edita" src="./editha_v2.webp" alt="Эдита Блэк">
 
           </div>
+
+      <div class="page-dress"><img
+      class="page-decor"
+      src="./handsnake.webp"
+      style="
+        --x: 30%;
+        --y: 44%;
+        --w: 10%;
+        --r: 0deg;
+        filter: drop-shadow(2px 4px 3px rgba(35, 24, 12, 0.40));
+      ">
+         </div>
 
         `,
 
@@ -987,6 +971,28 @@ const sections = {
 
           </div>
 
+                <div class="page-dress"><img
+      class="page-decor"
+      src="./threedoors.webp"
+      style="
+        --x: 37%;
+        --y: 1%;
+        --w: 8%;
+        --r: 30deg;
+        filter: drop-shadow(2px 4px 3px rgba(35, 24, 12, 0.40));
+      ">
+         </div>
+          
+          <div class="page-dress"><img
+      class="page-decor"
+      src="./owl.webp"
+      style="
+        --x: 50%;
+        --y: 55%;
+        --w: 10%;
+        --r: -7deg;
+      ">
+         </div>
         `,
 
         right: `
@@ -995,7 +1001,7 @@ const sections = {
 
           <p>Я рассказала о ликантропии только ему, поэтому сейчас считает его наиболее очевидным кандидатом на источник утечки Холлоуэй. Вместо практической помощи он дал мне книгу с историей другого оборотня, из которой я вынесла лишь необходимость научиться контролировать превращение; <br>если информацию действительно передал он, для меня это предательство доверия независимо от причин.<br>
 
-<b>Связи:</b> Холлоуэй/Министерство — возможная передача сведений. <br>Пока доказательств утечки именно от него нет, и все же - лишь плюс в копилку разочарования.</p>
+<b>Если Дамблдор действительно не слил информацию, то откуда у Виктории настолько подробное досье, включая имя Огга?</b></p>
 
         `
 
@@ -1043,7 +1049,8 @@ const sections = {
 
           <p>Укусил меня. Именно через него я вообще оказалась втянута в историю оборотней.<br> Позже привел меня к их сообществу и на этом по сути счел свою миссию выполненной.<br>Пока скорее источник проблемы и проводник в эту ветку, чем самостоятельная фигура в заговоре.<br>
 
-<b>Связи:</b><br>Консерватория оборотней — прямая; <br>Я и он — укус, знакомство с сообществом.</p>
+<b>Связи:</b><br>Консерватория оборотней — прямая; <br>Я и он — укус, знакомство с сообществом.<br><br>
+ОГГ ПРОПАЛ. ЧТО С НИМ СДЕЛАЛИ?</p>
 
         `
 
@@ -1078,9 +1085,23 @@ const sections = {
 
           <div class="portrait-wrap">
 
-            <img src="./victoria_v2.webp" class="portrait-warp" id="victoria" alt="Виктория Холлоуэй">
+            <img src="./judgement.webp" class="portrait-warp" id="judgement" alt="Документы из суда">
 
           </div>
+
+          <div class="page-dress">
+
+          <img
+      class="page-decor"
+      src="./assets/decor/ministry-seal.png"
+      style="
+        --x: 7%;
+        --y: 8%;
+        --w: 18%;
+        --r: -7deg;
+      "
+          >
+         </div>
 
         `,
 
@@ -1111,7 +1132,7 @@ const sections = {
 
           <div class="portrait-wrap">
 
-            <img class="portrait-warp" id="hogwarts" src="./hogwarts.webp">
+            <img class="portrait-warp" id="hogwarts" src="./hogwarts_v3.webp">
 
           </div>
 
@@ -1139,7 +1160,7 @@ const sections = {
 
         <div class="portrait-wrap">
 
-            <img class="portrait-warp" id="hogwarts" src="./hogwarts2.webp">
+            <img class="portrait-warp" id="hogwarts2" src="./hogwarts4.webp">
 
           </div>
 
@@ -1159,7 +1180,7 @@ const sections = {
 
         <div class="portrait-wrap">
 
-        <img class="portrait-warp" id="hogsmith" src="./hogsmith.webp">
+        <img class="portrait-warp" id="hogsmith" src="./hogsmith3.webp">
 
         `,
 
@@ -1181,7 +1202,7 @@ const sections = {
 
         <div class="portrait-wrap">
 
-        <img class="portrait-warp" id="hogsmith" src="./hogsmith2.webp">
+        <img class="portrait-warp" id="hogsmith2" src="./hogsmith4.webp">
 
         `,
 
@@ -1199,7 +1220,7 @@ const sections = {
 
         <div class="portrait-wrap">
 
-        <img class="portrait-warp" id="forestshack" src="./shack.webp">
+        <img class="portrait-warp" id="forestshack" src="./shack2.webp">
 
           </div>
 
@@ -1234,6 +1255,34 @@ const sections = {
   organizations: {
 
     pages: [
+      
+       {
+
+        left: `
+
+          <div class="portrait-wrap">
+
+            <img class="portrait-warp" id="artel" src="./artel.webp" alt="Артель">
+
+          </div>
+
+        `,
+
+        right: `
+
+          <h2>Артель</h2>
+
+          <p>Участники считают Артель компанией взаимовыручки, хотя окружающие чаще называют нас Барсучьей шайкой. К пятому курсу слухи превратили нас почти в школьную легенду. Большинство историй, конечно, сильно преувеличены, но несколько раз мы действительно оказывались в кабинете директора за драки, ночные вылазки и попытку провести в теплицы козу.<br><br><b>Оуэн Прайс</b> - наш задрот-стратег.<br>
+
+<b>Беа Харпер</b> - траволог-зельевар <i>(моя лучшая подружка <3)</i><br>
+
+<b>Элиас Мур</b> - ведет себя как таинственный принц, иногда это раздражает. Но отличный дуэлянт!
+
+</p>
+
+        `
+
+      },
 
       {
 
@@ -1241,7 +1290,7 @@ const sections = {
 
           <div class="portrait-wrap">
 
-            <img class="portrait-warp" id="ministry" src="./ministry.webp">
+            <img class="portrait-warp" id="ministry" src="./ministry2.webp">
 
           </div>
 
@@ -1259,13 +1308,47 @@ const sections = {
 
       },
 
+            {
+
+        left: `
+
+        <div class="page-dress">
+
+          <img
+      class="page-decor"
+      src="./papersavior.webp"
+      style="
+        --x: 35%;
+        --y: 15%;
+        --w: 18%;
+        --r: -7deg;
+      "
+          >
+         </div>
+
+          <div class="portrait-wrap">
+
+            <img class="portrait-warp" id="ministry" src="./ministry2.webp">
+
+          </div>
+
+        `,
+
+        right: `
+
+          <p><b>Флоренс Белл — новая фигура.</b><br>Старший клерк Визенгамота и помощница Виктории, которая при этом хочет ее сместить. Ей нужен компромат. Она предупредила о бумажных журавликах, которые летают по Хогвартсу и записывают разговоры. Предлагает не ловить их, а специально скармливать им абсурдную ложь и смотреть, начнет ли Министерство действовать по ложным следам. То есть потенциально это способ проверить, действительно ли журавлики работают на Викторию и кто использует собранную ими информацию.</p>
+
+        `
+
+      },
+
       {
 
         left: `
 
            <div class="portrait-wrap">
 
-            <img class="portrait-warp" id="conservatory" src="./wolfs.webp">
+            <img class="portrait-warp" id="conservatory" src="./wolfs3.webp">
 
         `,
 
@@ -1274,6 +1357,26 @@ const sections = {
           <h2>Консерватория Оборотней</h2>
 
           <p>Закрытое сообщество обладает знаниями о контроле ликантропии, но делится ими только при условии полного принятия их образа жизни и фактического отказа от прежних связей. Для меня это выглядит как удерживание жизненно важных знаний и воспроизводство той же изоляции, против которой они сами выступают.</p>
+
+        `
+
+      },
+
+            {
+
+        left: `
+
+           <div class="portrait-wrap">
+
+            <img class="portrait-warp" id="drug" src="./drug.webp">
+
+        `,
+
+        right: `
+
+          <h2>Искаженные</h2>
+
+          <p>?</p>
 
         `
 
@@ -1293,71 +1396,140 @@ const sections = {
 
         left: `
 
+      <div class="page-dress">
+
+          <img
+      class="page-decor"
+      src="./girl.webp"
+      style="
+        --x: 34%;
+        --y: 17%;
+        --w: 10%;
+        --r: 40deg;
+      "
+          >
+         </div>
+
+      <div class="page-dress">
+
+          <img
+      class="page-decor"
+      src="./thetruth.webp"
+      style="
+        --x: 39.7%;
+        --y: 31%;
+        --w: 15%;
+        --r: 0deg;
+      "
+          >
+         </div>
+
+      <div class="page-dress">
+      <img
+      class="page-decor"
+      src="./werewolf.webp"
+      style="
+        --x: 49%;
+        --y: 40%;
+        --w: 8%;
+        --r: 40deg;
+      "
+          >
+     </div>
+
+
         <div class="portrait-wrap">
 
-        <img class="portrait-warp" id="items" src="./items_v2.webp">
+        <img class="portrait-warp" id="innerempire" src="./warp.webp">
+            >
+        </div>
 
         `,
 
         right: `
-
-                 <ul>
-
-  <li>
-
-    <strong>Зимний плащ</strong> — +1 живучесть, −1 маскировка.
-
-  </li><br>
-
-
-
-  <li>
-
-    <strong>Остроконечная шляпа</strong> — −1 скрытность, +1 репутация.
-
-  </li><br>
-
-
-
-  <li>
-
-    <strong>Проявитель врагов</strong> — зеркало, в котором должны проявляться/отражаться враги или потенциальная угроза.
-
-  </li><br>
-
-
-
-  <li>
-
-    <strong>Магический глаз</strong> — куплен на ярмарке; свойства пока не проверены. Непонятно это самостоятельный артефакт или глаз-протез и можно ли пользоваться им, не лишаясь собственного глаза. <i>(Не хотелось бы)</i>
-
-  </li><br>
-
-
-
-  <li>
-
-    <strong>Волчье печенье</strong> — печенье в форме волчьей головы, обладает расслабляющим/веселящим эффектом. Подарено маленькой девочкой из Консерватории оборотней. <i>(Интересно как она?)</i>
-
-  </li><br>
-
-
-
-  <li>
-
-    <strong>Ключ от Запретной секции библиотеки</strong>
-
-  </li><br>
-
-
-
-  <li>
-
-    <strong>Шестеренка из загадочного механизма</strong> — функциональной ценности сейчас не имеет, оставлена <strong>на память</strong>.
-
-  </li>
-
-</ul>
+        
+<div
+    class="thought-stream"
+    style="
+      font-family: 'Courier New', monospace;
+      font-size: 7px;
+      line-height: 1.15;
+      letter-spacing: -0.15px;
+      color: #51483d;
+      opacity: 0.82;
+      white-space: pre-line;
+      text-align: left;
+    "
+  ><b>ты не одна</b> / тогда почему все это происходит только со мной?
+я знаю, что они рядом / <b>это не то же самое, что помощь</b>
+я устала быть хорошей / нет, я просто устала платить за это
+поступай правильно / <b>и снова получишь по голове</b>
+я бы все равно полезла в тот подвал
+я бы все равно спасла Дерека
+<b>почему я спасла Дерека</b>
+потому что иначе это была бы уже не я
+иногда мне очень хочется, чтобы это была уже не я
+я не хочу быть опасной / <b>я не хочу, чтобы меня делали безопасной</b>
+они называют это лечением
+а если я не больна?
+а если больна — разве это дает им право решать за меня?
+<b>я хочу научиться контролировать волка</b>
+я хочу снова стать волком
+я была счастлива
+<s>мне просто понравилось быть сильной</s>
+нет. <b>я была свободна</b>
+там никто ничего от меня не хотел
+беги / быстрее / еще быстрее / не думай
+оказывается, я умею не бояться себя
+хуже всего, если они заставят меня снова начать
+Огг изменил мою жизнь за несколько секунд
+и почему последствия теперь моя обязанность?
+я ненавижу его / я переживаю, где он
+<b>это нечестно</b>
+справедливость вообще когда-нибудь работает в обе стороны?
+я хочу делать добро
+я хочу один раз пройти мимо
+я знаю, что не пройду
+<b>ненавижу это в себе</b>
+нет
+ненавижу, что они заставляют меня ненавидеть это в себе
+я доверяю Дамблдору
+<s>я не доверяю Дамблдору</s>
+я хочу ему верить
+это разные вещи
+я хочу, чтобы он верил мне
+я хочу, чтобы он считал меня умной
+способной
+хорошей
+<b>важной</b>
+я не влюблена
+наверное, влюблена
+нет, я просто хочу быть похожей на него
+нет, я хочу, чтобы <b>он хотел быть похожим на меня</b>
+это вообще не имеет смысла
+пригласить его на танец — плохая идея
+поэтому, конечно, я это сделаю
+если он меня предал, почему мне все еще важно, что он обо мне думает?
+если он не предал меня, почему я так хочу, чтобы он это доказал?
+Виктория боялась меня еще до того, как я стала оборотнем
+<b>почему?</b>
+что во мне было опасного тогда?
+что во мне опасного сейчас?
+что, если дело вообще не в волке?
+что, если волк — единственная часть этой истории, которая мне ничего не сделала?
+они хотят забрать его
+<s>может быть, надо позволить</s>
+<b>нет</b>
+я не хочу становиться монстром
+я не уверена, что знаю, кто здесь монстр
+милосердие не должно так болеть
+быть доброй не должно быть настолько унизительно
+однажды я перестану подставлять вторую щеку
+<s>однажды</s>
+завтра?
+нет
+пока нет
+<b>пожалуйста, пусть во мне хоть что-нибудь останется моим</b></div>
 
         `
 
@@ -1437,6 +1609,18 @@ const WARP_CONFIG = {
 
   },
 
+    judgement: {
+
+    topLeft:     { x: -70, y: -20 },
+
+    topRight:    { x:  -20, y: -10 },
+
+    bottomRight: { x:  100, y:  50 },
+
+    bottomLeft:  { x: -50, y:  70 }
+
+  },
+
 
 
   derek: {
@@ -1497,27 +1681,38 @@ const WARP_CONFIG = {
 
   ministry: {
 
-    topLeft:     { x:  -20, y: 20 },
+    topLeft:     { x: -40, y: 10 },
 
-    topRight:    { x:  -40, y: 40 },
+    topRight:    { x:  -30, y: 20 },
 
-    bottomRight: { x: 60, y: -60 },
+    bottomRight: { x: 80, y: 30 },
 
-    bottomLeft:  { x: -10, y: -40 }
+    bottomLeft:  { x: -10, y: 40 }
+
+  },
+
+  drug: {
+
+    topLeft:     { x: -40, y: 10 },
+
+    topRight:    { x:  -30, y: 20 },
+
+    bottomRight: { x: 80, y: 30 },
+
+    bottomLeft:  { x: -10, y: 40 }
 
   },
 
 
-
   conservatory: {
 
-    topLeft:     { x:  -20, y: 20 },
+    topLeft:     { x:  -40, y: 0 },
 
-    topRight:    { x:  -40, y: 40 },
+    topRight:    { x:  -20, y: 40 },
 
-    bottomRight: { x:  60, y: -60 },
+    bottomRight: { x:  90, y: 80 },
 
-    bottomLeft:  { x: -10, y: -40 }
+    bottomLeft:  { x: -60, y: 90 }
 
   },
 
@@ -1529,13 +1724,13 @@ const WARP_CONFIG = {
 
     topRight:    { x:  -40, y: 30 },
 
-    bottomRight: { x:  90, y:  60 },
+    bottomRight: { x:  90, y:  30 },
 
-    bottomLeft:  { x: -30, y: 70 }
+    bottomLeft:  { x: -30, y: 40 }
 
   }, 
 
-   hogsmith: {
+  hogwarts2: {
 
     topLeft:     { x:  -30, y: 10 },
 
@@ -1547,27 +1742,50 @@ const WARP_CONFIG = {
 
   }, 
 
-   forestshack: {
+  hogsmith: {
 
     topLeft:     { x:  -30, y: 10 },
 
     topRight:    { x:  -40, y: 30 },
 
-    bottomRight: { x:  90, y:  60 },
+    bottomRight: { x:  90, y:  40 },
 
-    bottomLeft:  { x: -30, y: 70 }
+    bottomLeft:  { x: -30, y: 60 }
+
+  }, 
+  hogsmith2: {
+
+    topLeft:     { x:  -30, y: 10 },
+
+    topRight:    { x:  -40, y: 30 },
+
+    bottomRight: { x:  90, y:  70 },
+
+    bottomLeft:  { x: -30, y: 80 }
+
+  }, 
+
+  forestshack: {
+
+    topLeft:     { x:  -30, y: 10 },
+
+    topRight:    { x:  -40, y: 20 },
+
+    bottomRight: { x:  90, y:  30 },
+
+    bottomLeft:  { x: -30, y: 40 }
 
   },
 
-    items: {
+  innerempire: {
 
-    topLeft:     { x:  -49, y: 5 },
+    topLeft:     { x:  -60, y: -40 },
 
     topRight:    { x:  -10, y: 30 },
 
-    bottomRight: { x:  100, y:  50 },
+    bottomRight: { x:  100, y:  70 },
 
-    bottomLeft:  { x: -40, y:  60 }
+    bottomLeft:  { x: -60, y:  180 }
 
   }
 
