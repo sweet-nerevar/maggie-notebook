@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Дневник Мэгги — tldraw</title>
+  <style>
+    * { box-sizing: border-box; }
+    html, body { margin: 0; width: 100%; height: 100%; overflow: hidden; background: transparent; }
+    body { font-family: Georgia, "Times New Roman", serif; }
+    #notebook-frame {
+      display: block;
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      border: 0;
+      background: transparent;
+    }
+
+    /* При обычном просмотре дневник крошечный, как предмет на столе.
+       Его исходный код сам подстраивает масштаб под рамку. */
+    .launch {
+      position: absolute;
+      inset: 0;
+      z-index: 2;
+      width: 100%;
+      height: 100%;
+      border: none;
+      margin: 0;
+      padding: 0;
+      appearance: none;
+      background: transparent;
+      cursor: zoom-in;
+    }
+    .launch:focus-visible {
+      outline: 2px solid rgba(172, 128, 80, .85);
+      outline-offset: -3px;
+    }
+
+    .close {
+      display: none;
+      position: fixed;
+      z-index: 20;
+      top: max(18px, env(safe-area-inset-top));
+      right: max(18px, env(safe-area-inset-right));
+      width: 42px;
+      height: 42px;
+      border: 1px solid rgba(195, 157, 108, .85);
+      border-radius: 50%;
+      background: rgba(33, 26, 22, .87);
+      color: #f6e8cf;
+      font: 400 26px/1 Arial, sans-serif;
+      cursor: pointer;
+      box-shadow: 0 4px 14px rgba(0,0,0,.35);
+      backdrop-filter: blur(5px);
+    }
+    .close:hover, .close:focus-visible {
+      background: rgba(77, 51, 35, .96);
+      border-color: #efd5a9;
+      outline: 2px solid rgba(231, 200, 151, .45);
+      outline-offset: 3px;
+    }
+
+    html:fullscreen,
+    html:-webkit-full-screen {
+      width: 100vw;
+      height: 100vh;
+      background: rgba(10, 9, 9, .87);
+    }
+    html:fullscreen body,
+    html:-webkit-full-screen body { width: 100vw; height: 100vh; }
+    html:fullscreen #notebook-frame,
+    html:-webkit-full-screen #notebook-frame { z-index: 5; }
+    html:fullscreen .launch,
+    html:-webkit-full-screen .launch { display: none; }
+    html:fullscreen .close,
+    html:-webkit-full-screen .close { display: grid; place-items: center; }
+
+    /* Если tldraw/браузер запретили fullscreen, показываем отдельную ссылку.
+       Так читатель не остается с крошечным, неуправляемым дневником. */
+    .fallback {
+      display: none;
+      position: absolute;
+      z-index: 5;
+      inset: 0;
+      padding: 16px;
+      text-align: center;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      gap: 10px;
+      color: #f4e5ce;
+      background: rgba(24, 20, 18, .91);
+    }
+    .fallback.show { display: flex; }
+    .fallback p { max-width: 290px; margin: 0; font-size: 14px; line-height: 1.5; }
+    .fallback a {
+      color: #f8e6c5;
+      border: 1px solid rgba(195, 157, 108, .8);
+      border-radius: 999px;
+      padding: 9px 14px;
+      text-decoration: none;
+      background: rgba(95, 62, 39, .6);
+      font-size: 13px;
+    }
+    .fallback button {
+      border: 0;
+      padding: 6px;
+      color: #cbb99f;
+      background: none;
+      text-decoration: underline;
+      cursor: pointer;
+      font-size: 12px;
+    }
+  </style>
+</head>
+<body>
+  <!-- Тот же самый опубликованный дневник. Все его вкладки и страницы остаются нетронутыми. -->
+  <iframe id="notebook-frame" src="./index.html" title="Дневник Мэгги" loading="eager"></iframe>
+  <button id="launch" class="launch" type="button" aria-label="Развернуть дневник Мэгги на весь экран" title="Открыть дневник"></button>
+  <button id="close" class="close" type="button" aria-label="Закрыть полноэкранный дневник" title="Закрыть">×</button>
+  <div id="fallback" class="fallback" role="status" aria-live="polite">
+    <p>Браузер не разрешил открыть дневник на весь экран внутри tldraw.</p>
+    <a href="./index.html" target="_blank" rel="noopener noreferrer">Открыть дневник отдельно ↗</a>
+    <button id="dismiss" type="button">Вернуться к обложке</button>
+  </div>
+
+  <script>
+    "use strict";
+    const launch = document.getElementById("launch");
+    const closeButton = document.getElementById("close");
+    const fallback = document.getElementById("fallback");
+    const frame = document.getElementById("notebook-frame");
+    const dismiss = document.getElementById("dismiss");
+    let wasFullscreen = false;
+
+    function resetToCover() {
+      // Дневник открывается каждый раз с родной обложки.
+      // Это отдельный iframe, поэтому перезагрузка не меняет исходный index.html.
+      frame.src = "./index.html";
+    }
+
+    launch.addEventListener("click", async () => {
+      if (document.fullscreenElement) return;
+      fallback.classList.remove("show");
+      try {
+        if (!document.documentElement.requestFullscreen) {
+          throw new Error("Fullscreen API unavailable");
+        }
+        await document.documentElement.requestFullscreen();
+      } catch (error) {
+        console.warn("Fullscreen недоступен во встраивании:", error);
+        fallback.classList.add("show");
+      }
+    });
+
+    closeButton.addEventListener("click", () => {
+      if (document.fullscreenElement) document.exitFullscreen();
+    });
+    dismiss.addEventListener("click", () => fallback.classList.remove("show"));
+
+    document.addEventListener("fullscreenchange", () => {
+      const nowFullscreen = Boolean(document.fullscreenElement);
+      if (wasFullscreen && !nowFullscreen) {
+        resetToCover();
+        launch.focus({ preventScroll: true });
+      }
+      wasFullscreen = nowFullscreen;
+    });
+  </script>
+</body>
+</html>
