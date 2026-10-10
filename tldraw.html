@@ -77,6 +77,37 @@
     html:fullscreen .close,
     html:-webkit-full-screen .close { display: grid; place-items: center; }
 
+    /* Магия открытия: в полный экран сначала влетает сам дневник,
+       а не его страницы по отдельности. Родной index.html не меняем. */
+    @keyframes maggie-zoom-in {
+      0%   { transform: translateY(28px) scale(.42); opacity: 0; }
+      54%  { transform: translateY(-5px) scale(1.035); opacity: 1; }
+      76%  { transform: translateY(2px) scale(.985); opacity: 1; }
+      100% { transform: translateY(0) scale(1); opacity: 1; }
+    }
+    @keyframes maggie-room-dim {
+      0%   { background-color: rgba(10, 9, 9, 0); }
+      100% { background-color: rgba(10, 9, 9, .87); }
+    }
+    html:fullscreen,
+    html:-webkit-full-screen {
+      animation: maggie-room-dim 420ms ease-out both;
+    }
+    html:fullscreen #notebook-frame,
+    html:-webkit-full-screen #notebook-frame {
+      transform-origin: center center;
+      animation: maggie-zoom-in 670ms cubic-bezier(.18,.81,.29,1) both;
+      will-change: transform, opacity;
+    }
+    @media (prefers-reduced-motion: reduce) {
+      html:fullscreen,
+      html:-webkit-full-screen,
+      html:fullscreen #notebook-frame,
+      html:-webkit-full-screen #notebook-frame {
+        animation: none;
+      }
+    }
+
     /* Если tldraw/браузер запретили fullscreen, показываем отдельную ссылку.
        Так читатель не остается с крошечным, неуправляемым дневником. */
     .fallback {
